@@ -104,5 +104,116 @@ public class Main {
         boolean	    1 bit	    Stores true or false values
         char	    2 bytes 	Stores a single character/letter or ASCII values
          */
+
+        double A,B,C,D,E,F,G; // deklarasi variable
+        // inisiasi variable
+        A=1.0;
+        B=2.0;
+        // ekspresi operator
+        C=A+B;
+        D=A-B;
+        E=A*B;
+        F=A/B;
+        G=A%B;
+
+        System.out.println("A="+A);
+        System.out.println("B="+B);
+        System.out.println("C="+C);
+        System.out.println("D="+D);
+        System.out.println("E="+E);
+        System.out.println("F="+F);
+        System.out.println("G="+G);
+
+        /*
+        OPERATOR ASSIGNMENT
+        +=
+        -=
+        *=
+        /=
+        %=
+        &=
+        |=
+        ^=
+        <<=
+        >>=
+        >>>=
+
+            *contoh pemakaian :
+                misalkan ada value x & y
+                maka untuk pemakaian operasi penjumlahan x+=y.
+                arti variable tersebut sama dengan x=x+y
+                begitu juga yang lainnya...
+         */
+
+        /*
+        OPERATOR INCREMENT & DECREMENT
+        merupakan operator untuk kenaikan & penurunan nilai.
+            OPERATOR                CONTOH
+            Prefix Increment ++     ++I
+            Postfix Increment ++    I++
+            Prefix Decrement --     --I
+            Postfix Decrement --    I--
+         */
+
+        int xXxXx=10, yYyYy=10;
+        System.out.println(++xXxXx);
+        System.out.println(xXxXx++);
+        System.out.println(xXxXx);
+        System.out.println(--yYyYy);
+        System.out.println(yYyYy--);
+        System.out.println(yYyYy);
+
+        /*
+        OPERATOR RELASI
+        merupakan operator menghasilkan nilai boolean yaitu true/false
+            OPERATOR                        CONTOH
+            >(lebih besar)                  if(x>y)
+            <(lebih kecil)                  if(x<y)
+            >=(lebih besar sama dengan)     if(x>=y)
+            <=(lebih kecil sama dengan)     if(X<=y)
+            ==(sama dengan)                 if(x==y)
+            !=(tidak sama dengan)           if(x!=y)
+         */
+
+        /*
+        OPERATOR LOGIKA
+        merupakan operator untuk operasi logika yang sudah tentu menghasilkan nilai boolean yaitu true/false
+            OPERATOR        CONTOH
+            &&(and/dan)     (x>y && x<y)
+            ||(or/atau)     (x>y || x<y)
+            !(not/bukan)    if(x!y) // inisiasinya akan seperti (!(x==y));
+         */
+        int xXxXxX=5, yYyYyY=10;
+        System.out.println(xXxXxX>yYyYyY && xXxXxX<yYyYyY);
+        System.out.println(xXxXxX>yYyYyY || xXxXxX<yYyYyY);
+        System.out.println(!(xXxXxX==yYyYyY));
+
+        /*
+        OPERATOR BIT
+        merupakan operator untuk
+        - memanipulasi data biner
+        - melakukan pergeseran bit ke kanan/kiri
+        - melakukan proses invers
+            OPERATOR    CONTOH
+            >>          (x>>y)
+            <<          (x<<y)
+         */
+        int xXxXxXx=5, yYyYyYy=10;
+        System.out.println(xXxXxXx>>yYyYyYy);
+        System.out.println(xXxXxXx<<yYyYyYy);
+
+        /*
+        OPERATOR CASTING
+        merupakan operator untuk mengubah tipe data lain
+         */
+        int a=5, b=10;
+        char w=(char) a;
+        char z=(char) b;
+        System.out.println(a+" ini jadi data tipe char");
+        System.out.println(b+" ini jadi data tipe char");
+
+        /*
+        KONVERSI DATA
+         */
     }
 }
