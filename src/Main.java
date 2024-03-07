@@ -1,7 +1,13 @@
+import javax.swing.JOptionPane;
+import java.text.NumberFormat;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello World");
 
+
+
+        // CHAPTER 1 - KOMPONEN PROGRAM JAVA //
 
         // membuat variable name dengan tipe data string dan menghasilkan value "Muhammad Sahril"
         String name = "Muhammad Sahril";
@@ -214,6 +220,86 @@ public class Main {
 
         /*
         KONVERSI DATA
+        merupakan teknik untuk mengubah data dari tipe data tertentu ke tipe data yang lain.
+        konversi data dapat menggunakan metode operator casting atau metode tertentu
          */
+        int aA=5, bB=10;
+        double wW=(double) aA/bB;
+        System.out.println("Nilai wW=" + wW);
+        /*
+        jika konversi data ke tipe data string dengan metode casting tidak dapat dilakukan,
+        maka dapat menggunakan metode toString()
+         */
+        int aAa=10, bBb=5;
+        System.out.println("Nilai w=" +Double.toString(10/5));
+        /*
+        untuk mengkonversi variable dengan tipe data string dengan tipe data integer,
+        dapat menggunakan metode Integer.parsenInt(dataString)
+         */
+        String myStringreal = "1";
+        System.out.println("dari String ke Integer >>> "+Integer.parseInt(myStringreal));
+
+        /*
+        TAMPILAN ANGKA
+        untuk memudahkan user membaca tampilan angka
+         */
+        // menggunakan metode format tampilan angka
+        NumberFormat ubah=NumberFormat.getInstance();
+        ubah.setMinimumIntegerDigits(4);
+        ubah.setGroupingUsed(true);
+        System.out.println(ubah.format(1234));
+        System.out.println(ubah.format(234));
+        System.out.println(ubah.format(34));
+
+        // format tampilan data angka pecahan
+        NumberFormat ubahh=NumberFormat.getInstance();
+        ubahh.setMinimumFractionDigits(4);
+        System.out.println(ubahh.format(1.2345));
+        System.out.println(ubahh.format(2.345));
+        System.out.println(ubahh.format(3.45));
+
+
+
+        // CLASS JOptionPane //
+        /* digunakan untuk meng-input/output data dengan tampilan GUI(Graphic User Interface) atau grafis,
+        Class JOption memakai extention paket javax.swing
+            beberapa method yang sering digunakan :
+                - showInputDialog()
+                    untuk menerima input data dari keyboard berupa data string
+                - showMessageDialog()
+                    untuk menampilkan pesan ke layar, jenis pesan yang dapat diberikan
+                        a. INFORMATION_MESSAGE
+                        b. ERROR_MESSAGE
+                        c. WARNING_MESSAGE
+                        d. QUESTION_MESSAGE
+                        e. PLAIN_MESSAGE
+                - showConfirmDialog()
+                    untuk melakukan konfirmasi pemakai tentang suatu proses
+         */
+        // metode memasukkan input
+        String panjang;
+        panjang = JOptionPane.showInputDialog("Data Panjang ?");
+        System.out.println("Data panjang yang anda masukkan = "+panjang);
+
+        // metode menampilkan pesan ke layar dari perintah yang diberikan
+        String Nama;
+        Nama = JOptionPane.showInputDialog("Nama Anda Siapa?");
+        JOptionPane.showMessageDialog(null, "Hai " +Nama, "Informasi", JOptionPane.INFORMATION_MESSAGE);
+
+        // metode meng-konfirmasi suatu proses
+        String Namaku;
+        do {
+            Namaku = JOptionPane.showInputDialog("Nama Anda Siapa Sih?");
+            JOptionPane.showMessageDialog(null, "Halo " +Namaku, "Informasi", JOptionPane.INFORMATION_MESSAGE);
+        }
+        while (JOptionPane.showConfirmDialog(null, "Input lagi?")==JOptionPane.YES_OPTION);
+
+
+
+
+
+        // CHAPTER 2 - PROGRAM PENCABANGAN //
+
+
     }
 }
